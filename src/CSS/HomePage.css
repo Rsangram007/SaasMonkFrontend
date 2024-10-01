@@ -1,0 +1,86 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa; /* Light blue background */
+}
+
+.movieList_Container {
+    max-width: 80%; /* Change width to max-width */
+    margin: 0 auto;
+    padding: 0 20px; /* Add padding to prevent overlapping with search bar */
+}
+
+.fas.fa-search.search-icon { /* Corrected selector */
+    color: #007c91; /* Darker blue for search icon */
+    margin-right: 8px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #b0e0e6; /* Light blue background for search bar */
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 20px; /* Add margin to separate from movie container */
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%; /* Adjust width to 100% */
+    background-color: #f0f8ff; /* Lighter blue input field background */
+}
+
+.heading {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #005f73; /* Darker blue for heading text */
+}
+
+/* Movies container styles */
+.movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    background-color: #d4f1f4; /* Light blue for movies container background */
+    padding: 1rem;
+    border-radius: 3px;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    background-color: #98c1d9; /* Change background to a darker light blue on hover */
+}
+
+/* Movie card styles */
+.movie-card {
+    background-color: #b0dfe5; /* Light blue background for movie card */
+    border-radius: 8px;
+    margin-bottom: 20px; /* Add margin bottom to separate cards */
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.movie-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #005f73; /* Dark blue for movie title */
+}
+
+.release-date,
+.rating {
+    margin-bottom: 0.5rem;
+    color: #006d77; /* Darker muted blue for release date and rating */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .movies-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
